@@ -2,7 +2,7 @@
 
 对[ALibaba Kiwi-国际化全流程解决方案](https://github.com/alibaba/kiwi)进行简化，旨在方便使用
 [ALibab kiwi-clis](https://www.npmjs.com/package/kiwi-clis)有一个快捷工具，里面的翻译原理是使用
-Google translate 进行翻译，因网络原因在国内使用可能不太方便，这里的替代方案是使用[阿里机器翻译](https://help.aliyun.com/product/30396.html), 因此需要开通该服务，如果有其它代替方案则需要通过继承的方式重写该模块中的[createTranslateTask](#user-content-createTranslateTask)方法
+Google translate 进行翻译，因网络原因在国内使用可能不太方便，这里的替代方案是使用[阿里机器翻译](https://help.aliyun.com/product/30396.html), 因此需要开通该服务，如果有其它代替方案则需要通过继承的方式重写该模块中的[createTranslateTask](#user-content-createtranslatetask)方法
 
 **安装**
 ```
