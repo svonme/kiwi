@@ -1,0 +1,27 @@
+{
+  "name": "@fengqiaogang/kiwi",
+  "version": "0.1.1",
+  "description": "kiwi translate",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "kiwi",
+    "kiwi-intl",
+    "translate"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svonme/kiwi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svonme/kiwi/issues"
+  },
+  "homepage": "https://github.com/svonme/kiwi#readme",
+  "dependencies": {
+    "@fengqiaogang/project-directory": "^0.1.1",
+    "@quclouds/translate": "^0.1.0",
+    "lodash": "^4.17.15"
+  }
+}
