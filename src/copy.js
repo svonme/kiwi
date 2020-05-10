@@ -4,32 +4,33 @@
  * @author svon.me@gmail.com
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const path = require('path');
-const mkdir = require('./mkdir');
-const common = require("./common");
-const childProcess = require('child_process');
+var path = require('path');
+var mkdir = require('./mkdir');
+var common = require("./common");
+var childProcess = require('child_process');
 function copyFile(langsDir, fileName) {
-    const source = path.join(langsDir, common.Langs.zhCn, fileName);
+    var source = path.join(langsDir, common.Langs.zhCn, fileName);
     // 复制中文文案到其它语言下
-    const keys = Object.keys(common.Langs);
-    for (const key of keys) {
-        const langName = common.Langs[key];
+    var keys = Object.keys(common.Langs);
+    for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
+        var key = keys_1[_i];
+        var langName = common.Langs[key];
         if (langName !== common.Langs.zhCn) {
-            const folder = path.join(langsDir, langName);
+            var folder = path.join(langsDir, langName);
             // 判断文件夹是否存在，不存在则创建
             mkdir(folder);
             // 复制文件
-            const target = path.join(folder, fileName);
-            const shell = `cp ${source} ${target}`;
+            var target = path.join(folder, fileName);
+            var shell = "cp " + source + " " + target;
             childProcess.exec(shell);
         }
     }
 }
 function Copy(langsDir) {
     // 获取中文下的所有文案
-    const files = common.getFiles(langsDir, common.Langs.zhCn);
+    var files = common.getFiles(langsDir, common.Langs.zhCn);
     // 循环复制到其它语言下
-    for (let i = 0, len = files.length; i < len; i++) {
+    for (var i = 0, len = files.length; i < len; i++) {
         copyFile(langsDir, files[i]);
     }
 }

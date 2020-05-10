@@ -4,8 +4,8 @@
  * @author svon.me@gmail.com
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = require('fs');
-const path = require('path');
+var fs = require('fs');
+var path = require('path');
 var Langs;
 (function (Langs) {
     Langs["enUs"] = "en_US";
@@ -20,14 +20,14 @@ var translate;
 })(translate = exports.translate || (exports.translate = {}));
 function getFiles(langsDir, langName) {
     // 获取语言下的所有文案
-    const src = path.join(langsDir, langName);
-    const files = fs.readdirSync(src);
-    const list = [].concat(files);
-    const names = [];
-    for (let i = 0, len = list.length; i < len; i++) {
-        const name = list[i];
-        if (name) {
-            names.push(name);
+    var src = path.join(langsDir, langName);
+    var files = fs.readdirSync(src);
+    var list = [].concat(files);
+    var names = [];
+    for (var i = 0, len = list.length; i < len; i++) {
+        var name_1 = list[i];
+        if (name_1) {
+            names.push(name_1);
         }
     }
     return names;

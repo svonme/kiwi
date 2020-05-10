@@ -23,7 +23,7 @@ function Kiwi(accessKeyId, accessKeySecret) {
   } else {
     var src = path.join(directory, 'config.json');
     if (fs.existsSync(src)) {
-      var option = require('../../config.json');
+      var option = require(src);
       if (option.accessKeyId && option.accessKeySecret) {
         config['id'] = option.accessKeyId;
         config['secret'] = option.accessKeySecret;

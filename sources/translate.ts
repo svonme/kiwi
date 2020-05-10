@@ -13,8 +13,6 @@ import * as langs from './langs';
 import * as common from './common';
 import Copy from './copy';
 
-console.log(process)
-
 interface Config {
   accessKeyId?: string;
   accessKeySecret?: string;
@@ -154,6 +152,7 @@ class Kiwi {
     if (error) {
       throw error;
     }
+    console.log(src)
   }
   /**
    * 创建翻译任务
