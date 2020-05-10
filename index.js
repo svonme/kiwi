@@ -5,7 +5,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var KiwiTtranslat = require('./src/translate');
+var KiwiTtranslat = require('./src/main');
 var getDirectory = require('@fengqiaogang/project-directory');
 
 /**
@@ -32,6 +32,7 @@ function Kiwi(accessKeyId, accessKeySecret) {
         config['id'] = data.accessKeyId;
         config['secret'] = data.accessKeySecret;
       } else {
+        console.log(1)
         throw new Error('accessKeyId and accessKeySecret cannot be empty');
       }
     }
@@ -40,8 +41,11 @@ function Kiwi(accessKeyId, accessKeySecret) {
   if (fs.existsSync(langsDir)) {
     return new KiwiTtranslat(langsDir, config.accessKeyId, config.accessKeySecret);
   } else {
-    throw new Error(langsDir + ' cannot be empty');
+    var message = "'"+ langsDir + "'" + ' cannot be empty';
+    throw new Error(message);
   }
 }
+
+Kiwi()
 
 module.exports = Kiwi;
