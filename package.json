@@ -21,6 +21,7 @@
   "homepage": "https://github.com/svonme/kiwi#readme",
   "dependencies": {
     "@fengqiaogang/project-directory": "^0.1.1",
+    "@fengqiaogang/recursion": "^0.1.1",
     "@quclouds/translate": "^0.1.0",
     "lodash": "^4.17.15"
   }
